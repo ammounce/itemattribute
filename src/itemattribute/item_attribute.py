@@ -18,9 +18,23 @@ class ItemAttribute(object):
             for k in dictionary.keys():
                 self[k] = dictionary[k]
 
-    __getitem__ = object.__getattribute__
-    __setitem__ = object.__setattr__
-    __delitem__ = object.__delattr__
+    def __getitem__(self, key):
+        '''
+        Maps self[key] to the self.__getattribute__ method.
+        '''
+        return self.__getattribute__(key)
+
+    def __setitem__(self, key, value):
+        '''
+        Maps self[key] = value to the self.__setattr__ method.
+        '''
+        self.__setattr__(key, value)
+
+    def __delitem__(self, key):
+        '''
+        Maps del self[key] to the self.__delattr__ method.
+        '''
+        self.__delattr__(key)
 
     def keys(self):
         '''
