@@ -2,7 +2,7 @@ from .item_attribute import ItemAttribute
 
 import importlib.resources
 import json
-import  os
+import os
 
 
 dir = os.path.dirname(os.path.abspath(__file__))
