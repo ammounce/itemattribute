@@ -1,3 +1,12 @@
+## [0.0.4](https://github.com/ammounce/itemattribute/compare/v0.0.3...v0.0.4) (2025-01-06)
+
+
+### Bug Fixes
+
+* **overloading:** Fixed behavior where overloaded __setattr__ did not apply to __setitem___ ([3747431](https://github.com/ammounce/itemattribute/commit/37474315fa43e8c37af9eabce7012d0791d16411))
+
+
+
 ## [0.0.3](https://github.com/ammounce/itemattribute/compare/v0.0.2...v0.0.3) (2024-09-15)
 
 
