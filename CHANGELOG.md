@@ -1,3 +1,12 @@
+## [0.0.5](https://github.com/ammounce/itemattribute/compare/v0.0.4...v0.0.5) (2025-01-07)
+
+
+### Bug Fixes
+
+* Fixed syntax for item assignment ([9d11c92](https://github.com/ammounce/itemattribute/commit/9d11c92d9e209038a0ea55b1928f6b8bdd896f1e))
+
+
+
 ## [0.0.4](https://github.com/ammounce/itemattribute/compare/v0.0.3...v0.0.4) (2025-01-06)
 
 
