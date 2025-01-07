@@ -84,7 +84,7 @@ def test_contains():
 
 def test_setattr_overload():
 
-    class NewItemAttribute():
+    class NewItemAttribute(ItemAttribute):
         def __setattr__(self, key, value):
             if isinstance(value, (int, float)):
                 self.__dict__[key + 'p1'] = value + 1
@@ -92,5 +92,12 @@ def test_setattr_overload():
 
     newia = NewItemAttribute()
     newia.a = 1
+    assert newia.a == 1, 'Set attribute failed to assign to attribute'
+    assert newia.ap1 == 2, 'Set attribute failed to assign extra attribute'
+
+    del newia
+
+    newia = NewItemAttribute()
+    newia['a'] = 1
     assert newia.a == 1, 'Set attribute failed to assign to attribute'
     assert newia.ap1 == 2, 'Set attribute failed to assign extra attribute'
